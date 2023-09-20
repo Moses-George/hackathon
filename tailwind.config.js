@@ -10,17 +10,21 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "3rem",
       screens: {
-        "2xl": "1400px",
-      },
+        lg: "1280px",
+        xl: "1280px",
+        "2xl": "1280px"
+      }
     },
     extend: {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "#150E28",
+        peach: "#FF29B9",
+        purple: "#903AFF",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",

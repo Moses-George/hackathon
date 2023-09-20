@@ -1,8 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #150E28;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.border-gradient:hover {
+  border: 3px solid;
+  border-image-slice: 1;
+background: transparent;
+border-style: solid;
+border-width: 3px;
+border-radius: .3rem;
+border-image-source: linear-gradient(180deg, #9A39FF 0%, #FF29B9 100%) !important;
+}
+
+.active {
+  background: -webkit-linear-gradient(30deg, #903AFF 3.08%, #FF26B9 93.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+
+.active::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  bottom: -2rem;
+  left: 0;
+  height: 3px;
+  transition: width 150ms ease-in-out;
+}
+
+.unselected {
+  color: #fff;
+  border: none;
+}
  
-@layer base {
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -73,4 +113,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
