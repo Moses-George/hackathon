@@ -1,13 +1,13 @@
 import HackathonGuy from "@/assets/images/hackathon-guy.png";
 import { ReactComponent as CountDown } from "@/assets/images/countdown-time.svg";
-import { ReactComponent as PurpleLensFlare } from "@/assets/images/Purple-Lens-Flare-PNG.svg";
+// import { ReactComponent as PurpleLensFlare } from "@/assets/images/Purple-Lens-Flare-PNG.svg";
 import { ReactComponent as Curve } from "@/assets/images/curve.svg";
 import flare from "@/assets/images/Purple-Lens-Flare-PNG.png";
 import star from "@/assets/images/star.png";
 // import starGra from "@/assets/images/sata-gra.png";
 import title from "@/assets/images/title.png";
 import { Button } from "./ui/button";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion";   
 import { Link } from "react-router-dom";
 
 
