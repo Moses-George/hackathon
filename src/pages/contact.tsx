@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-// import { ReactComponent as PurpleLensFlare } from "@/assets/images/Purple-Lens-Flare-PNG.svg";
 import { ReactComponent as Back } from "@/assets/images/back.svg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,6 +14,11 @@ import { FormEvent } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { baseUrl } from "@/utils/baseUrl";
+import flare from "@/assets/images/Purple-Lens-Flare-PNG.png";
+import star from "@/assets/images/star.png";
+import starPu from "@/assets/images/star-pu.png";
+import starGra from "@/assets/images/star-gra.png";
+
 
 
 
@@ -62,12 +66,18 @@ const Contact = () => {
         e.preventDefault();
         await sendContactInfo();
     }
- 
+
     return (
         <section className="container sm:px-8 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-x-20 my-10 items-center shadow-md w-full">
+
+            <img className="absolute -rotate-90 -left-10 sm:top-0  sm:-left-10  w-[100vh] sm:w-full z-[-1] " src={flare} alt="" />
+            <img className="absolute bottom-0  -right-20 sm:-left-10 rotate-90  w-[100vh] sm:hidden z-[-1]" src={flare} alt="" />
+
+            <img className="absolute top-10 left-44 sm:left-10 sm:bottom-0 w-6 h-6 sm:w-4 sm:h-4" src={starPu} alt="" />
+            <img className="absolute right-[50%] sm:left-10 bottom-[65%] sm:bottom-0 sm:w-4 sm:h-4" src={starGra} alt="" />
+            <img className="absolute right-36 sm:right-10 top-4 w-6 h-6" src={star} alt="" />
+
             <Back className="hidden sm:block md:block mb-8 w-8 h-8" onClick={() => navigate(-1)} />
-            {/* <PurpleLensFlare className="absolute top-[20%] -left-[20%] " /> */}
-            {/* <PurpleLensFlare className="absolute -bottom-[80%] -right-[30%] " /> */}
             <motion.div
                 className="space-y-5 text-white justify-self-center sm:hidden md:hidden"
                 initial={{ x: -100, opacity: 0 }}
@@ -92,7 +102,7 @@ const Contact = () => {
                 </div>
             </motion.div>
 
-            <div className="bg-[rgba(0,0,0,0.15)] shadow-[0px_4px_4px_0px_#00000040] sm:bg-transparent p-16 sm:p-0 space-y-8 w-[90%] w-full">
+            <div className="bg-[rgba(20,0,0,233) shadow-[0px_4px_4px_0px_#00000040] sm:shadow-none sm:bg-transparent p-16 sm:p-0 space-y-8 w-[90%] w-full">
                 <motion.div
                     className="text-2xl font-semibold text-heading-text"
                     initial={{ x: 100, opacity: 0 }}
@@ -144,7 +154,7 @@ const Contact = () => {
                         name="message" required />
                     <Button className="bg-gradient-to-r from-peach to-purple px-4 h-12 w-40 self-center md:self-start text-white rounded-[.2rem] btn-border-gradient " >Submit</Button>
                 </motion.form>
-                <div className="space-y-2 hidden sm:flex flex-col items-center">
+                <div className="space-y-2 pb-4 hidden sm:flex flex-col items-center">
                     <p className="text-peach font-semibold">Share on</p>
                     <div className="flex items-center gap-3 mx-auto">
                         <Instagram className="w-4 h-4" />

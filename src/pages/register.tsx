@@ -9,6 +9,10 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { initialRegisterData, categories } from "@/utils/formData";
 import { baseUrl } from "@/utils/baseUrl";
+import flare from "@/assets/images/Purple-Lens-Flare-PNG.png";
+import star from "@/assets/images/star.png";
+import starPu from "@/assets/images/star-pu.png";
+import starGra from "@/assets/images/star-gra.png";
 
 
 
@@ -71,7 +75,15 @@ const Register = () => {
     return (
         <>
             {isSuccess && <Success onClose={() => setIsSuccess(false)} />}
-            <section className="container sm:px-6 grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-x-8 sm:gap-x-0 my-10 sm:my-4  w-full">
+            <section className="container relative sm:px-6 grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-x-8 sm:gap-x-0 my-10 sm:my-4  w-full">
+
+                <img className="absolute -rotate-90 -left-28 sm:bottom-[52% left-10 sm:-left-10  w-[100vh] sm:w-full z-[-1] " src={flare} alt="" />
+                <img className="absolute bottom-0  -right-20 sm:-left-10 rotate-90  w-[100vh] sm:hidden z-[-1]" src={flare} alt="" />
+
+                <img className="absolute top-10 left-44 sm:left-10 sm:top-20 w-6 h-6 sm:w-4 sm:h-4" src={starPu} alt="" />
+                <img className="absolute right-[50%] sm:left-16 bottom-[65%] sm:top-80 sm:w-4 sm:h-4" src={starGra} alt="" />
+                <img className="absolute right-36 sm:right-10 top-16 w-6 h-6" src={star} alt="" />
+
                 <motion.div
                     className="justify-self-start self-center"
                     initial={{ y: 100, opacity: 0 }}
@@ -80,7 +92,7 @@ const Register = () => {
                 >
                     <img className="sm:hidden md:hidden" src={designer} alt="" />
                 </motion.div>
-                <div className="bg-[rgba(0,0,0,0.15)] shadow-[0px_4px_4px_0px_#00000040] sm:bg-transparent p-16 sm:p-4 sm:w-full">
+                <div className="bg-[rgba(20,0,0,233) shadow-[0px_4px_4px_0px_#00000040] sm:shadow-none sm:bg-transparent p-16 sm:p-4 sm:w-full">
                     <motion.h1
                         className="text-2xl text-heading-text font-semibold mb-6"
                         initial={{ x: -100, opacity: 0 }}
@@ -122,7 +134,7 @@ const Register = () => {
                                 <label htmlFor="phoneNumber" className="text-white text-sm">Phone</label>
                                 <Input
                                     className=""
-                                    type="text"
+                                    type="number"
                                     placeholder="Enter the name of your group"
                                     value={userData.phoneNumber}
                                     onChange={handleChange}
@@ -159,7 +171,7 @@ const Register = () => {
                         <div className="flex justify-between md:flex-col sm:flex-col gap-y-4 gap-x-8">
                             <div className="grid w-full items-center gap-1.5">
                                 <label htmlFor="category" className="text-white text-sm">Category</label>
-                                <select required className="w-full bg-transparent border border-gray-200 text-gray-300 py-2.5 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-transparent focus:border-gray-500"
+                                <select required className="w-full bg-transparent border border-gray-200 text-gray-300 py-2.5 px-4 rounded leading-tight focus:outline-none focus:bg-transparent focus:border-gray-500 focus:ring-2 focus:ring-heading-text"
                                     id="category"
                                     name="category"
                                     onChange={handleChange}
@@ -171,17 +183,13 @@ const Register = () => {
 
                             <div className="grid w-full items-center gap-1.5">
                                 <label htmlFor="groupSize" className="text-white text-sm">Group Size</label>
-                                <select required className="w-full bg-transparent border border-gray-200 text-gray-300 py-2.5 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-transparent focus:border-gray-500"
+                                <select required className="block w-full bg-transparent border border-gray-200 text-gray-300 py-2.5 px-4  rounded leading-tight focus:outline-none focus:bg-transparent focus:ring-2 focus:ring-heading-text focus:border-gray-500"
                                     id="groupSize"
                                     name="groupSize"
                                     onChange={handleChange}
                                     value={userData.groupSize}>
                                     <option className="font-bold" disabled>Group size</option>
-                                    <option className="text-gray-700">10</option>
-                                    <option className="text-gray-700">20</option>
-                                    <option className="text-gray-700">30</option>
-                                    <option className="text-gray-700">40</option>
-                                    <option className="text-gray-700">50</option>
+                                    {[10, 20, 30, 40, 50, 60].map(size => <option key={size} className="text-gray-700">{size}</option>)}
                                 </select>
                             </div>
                         </div>
@@ -193,7 +201,7 @@ const Register = () => {
                                     type="checkbox"
                                     id="privacyAccepted"
                                     required
-                                    className="border-white"
+                                    className="w-4 h-4 text-blue-600  bg-gray-100 border-gray-100 rounded-lg focus:ring-blue-500 focus:ring-2"
                                     name="privacyAccepted"
                                     onChange={handleChange}
                                 />

@@ -3,19 +3,14 @@ import { ReactComponent as Arrow } from "@/assets/images/arrow.svg";
 import { motion } from "framer-motion";
 import starGra from "@/assets/images/star-gra.png";
 import starPu from "@/assets/images/star-pu.png";
-// import { ReactComponent as StarGra } from "@/assets/images/star-gra.svg";
-// import { ReactComponent as StarPu } from "@/assets/images/star-pu.svg";
 
 
 const IntroSection = () => {
 
     return (
         <section className="container sm:px-8 relative py-10 sm:py-8 grid grid-cols-2 sm:grid-cols-1 gap-12">
-            {/* <hr className="w-[ absolute bottom-0" /> */}
             <img className="absolute top-56 left-20 sm:left-6 " src={starGra} alt="" />
             <img className="absolute top-32 right-44 sm:right-6" src={starPu} alt="" />
-            {/* <StarGra className="absolute left-5 w-16 h-16 z-[100] " /> */}
-            {/* <StarPu className="absolute right-60" /> */}
             <motion.div
                 className="flex flex-col justify-self-end sm:gap-4"
                 whileInView={{ x: 0, opacity: 1 }}

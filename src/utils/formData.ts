@@ -1,7 +1,7 @@
 
 export const initialRegisterData = {
     teamName: "",
-    phoneNumber: "",
+    phoneNumber: +234 ,
     email: "",
     projectTopic: "",
     category: "",
@@ -12,7 +12,7 @@ export const initialRegisterData = {
 export const initialContactData = {
     email: "",
     firstName: "",
-    phoneNumber: "",
+    phoneNumber: +234,
     message: ""
 }
 

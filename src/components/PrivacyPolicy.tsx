@@ -1,17 +1,19 @@
-// import { ReactComponent as PurpleLensFlare } from "@/assets/images/Purple-Lens-Flare-PNG.svg";
 import privacy from "@/assets/images/privacy.png";
 import { ReactComponent as Mark } from "@/assets/images/mark.svg";
 import { Button } from "./ui/button";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
+import flare from "@/assets/images/Purple-Lens-Flare-PNG.png";
 
 
 
 const PrivacyPolicy = () => {
 
     return (
-        <section className="container sm:px-8 py-10 sm:py-8 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-12 w-full text-sm">
-            <div className="relative w-full space-y-12">
-                {/* <PurpleLensFlare className="absolute -bottom-[50%] -left-[50%] mb-0" /> */}
+        <section className="container relative sm:px-8 py-10 sm:py- grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-12 w-full text-sm">
+            
+            <img className="absolute bottom-0  left-0  rotate-180  w-[45rem] sm:w-full z-[-1] " src={flare} alt="" />
+
+            <div className="w-full space-y-12">
                 <motion.div
                     className="w-full space-y-5 sm:text-center"
                     whileInView={{ x: 0, opacity: 1 }}

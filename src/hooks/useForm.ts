@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from "react";
 
 export interface RegisterData {
     teamName: string;
-    phoneNumber: string;
+    phoneNumber: number;
     email: string;
     projectTopic: string;
     category: string;
@@ -12,7 +12,7 @@ export interface RegisterData {
 
 export interface ContactData {
     email: string;
-    phoneNumber: string;
+    phoneNumber: number;
     firstName: string;
     message?: string;
 }

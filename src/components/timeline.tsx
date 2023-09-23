@@ -28,7 +28,7 @@ const Timeline = () => {
                                 <h1 className="text-2xl text-heading-text font-bold sm:text-sm">{timeline.heading}</h1>
                                 <p className="text-white text-sm max-w-sm  sm:text-sm">{timeline.message}</p>
                             </div>
-                            <div className="flex flex-col items-center sm:row-start-1 sm:row-end-3 align-self-end">
+                            <div className="flex flex-col items-center sm:row-start-1 sm:row-end-3">
                                 <div className="h-28 sm:h-24 w-1 p-[1px] bg-heading-text rounded-lg"></div>
                                 <div className="px-5 py-3 sm:py-2 sm:px-3.5 rounded-full text-white bg-gradient-to-r from-peach to-heading-text text-md font-bold">{index + 1}</div>
                             </div>
@@ -47,8 +47,8 @@ const Timeline = () => {
                             <div className="sm:row-start-2 sm:row-end-3 sm:col-start-2 sm:col-end-3">
                                 <h1 className="text-2xl sm:text-sm text-heading-text font-bold text-end sm:text-start">November 18, 2023</h1>
                             </div>
-                            <div className="flex flex-col items-center sm:col-start-1 sm:col-end3 align-self-end">
-                                <div className="h-28 sm:h-24 w-1 p-[1px] bg-heading-text rounded-lg"></div>
+                            <div className="flex flex-col items-center sm:col-start-1 sm:col-end-2 sm:-mb-8">
+                                <div className="h-28  w-1 p-[1px] bg-heading-text rounded-lg"></div>
                                 <div className="px-5 py-3 sm:py-2 sm:px-3.5 rounded-full text-white bg-gradient-to-r from-peach to-heading-text
                                  text-md font-bold">{index + 1}</div>
                             </div>

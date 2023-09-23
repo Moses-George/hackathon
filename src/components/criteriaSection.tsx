@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import star from "@/assets/images/star.png";
 import starPu from "@/assets/images/star-pu.png";
+import flare from "@/assets/images/Purple-Lens-Flare-PNG.png";
 
 
 
@@ -11,16 +12,20 @@ const CriteriaSection = () => {
 
     return (
         <section className="container sm:px-8 relative py-10 sm:py-12 grid grid-cols-2 sm:grid-cols-1 gap-12">
+
+            <img className="absolute -bottom-[2%] sm:top-16 left-0 sm:-left-10 rotate-180 sm:-rotate-90  w-[45rem] sm:w-full z-[-1] " src={flare} alt="" />
+            <img className="absolute -bottom-[40%] sm:bottom-0 -right-40 sm:-right-20 rotate-90  w-[45rem] sm:w-full z-[-1] " src={flare} alt="" />
+
             <img className="absolute top-8 sm:top-0 left-36 sm:w-6 sm:h-6" src={starPu} alt="" />
-            <div className="absolute sm:hidden top-20 left-36 z-[-1] bg-gradient-to-r from-peach to-purple p-12 rounded-full"></div>
+            <div className="absolute sm:hidden top-24 left-36 z-[-1] bg-gradient-to-r from-peach to-purple p-12 rounded-full"></div>
             <img className="absolute right-[52%] sm:right-10 bottom-10 sm:bottom-0 sm:w-4 sm:h-4" src={star} alt="" />
+
             <motion.div
                 className="self-center"
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 1, ease: "easeIn" }}
-                initial={{ x: 100, opacity: 0 }}
-            >
+                initial={{ x: 100, opacity: 0 }}>
                 <img src={criterion} alt="" />
             </motion.div>
             <div className="space-y-5 sm:text-center">

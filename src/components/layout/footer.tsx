@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ReactComponent as Logo } from "@/assets/images/getlinked.svg";
 import { ReactComponent as Twitter } from "@/assets/images/twitter.svg";
 import { ReactComponent as LinkedIn } from "@/assets/images/linkedIn.svg";
@@ -5,14 +7,20 @@ import { ReactComponent as Facebook } from "@/assets/images/facebook.svg";
 import { ReactComponent as Instagram } from "@/assets/images/instagram.svg";
 import { ReactComponent as Phone } from "@/assets/images/phone.svg";
 import { ReactComponent as Location } from "@/assets/images/location.svg";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import star from "@/assets/images/star.png";
+import starPu from "@/assets/images/star-pu.png";
+import starGra from "@/assets/images/star-gra.png";
 
 const Footer = () => {
 
     return (
-        <footer className="py-10 sm:space-y-10 text-white">
-            <div className="container grid grid-cols-3 sm:grid-cols-1 sm:gap-8 justify-items-center sm:justify-items-start py-4">
+        <footer className="relative py-10 sm:space-y-10 text-white">
+
+            <img className="absolute top-10 left-4 sm:left-10  w-6 h-6 sm:w-4 sm:h-4" src={starPu} alt="" />
+            <img className="absolute right-[38%] sm:right-24 bottom-24 sm:top-80 w-6 h-6" src={starGra} alt="" />
+            <img className="absolute right-36 sm:right-10 top-16 sm:top-[70%] w-6 h-6" src={star} alt="" />
+
+            <div className="container sm:px-8 grid grid-cols-3 sm:grid-cols-1 sm:gap-8 justify-items-center sm:justify-items-start py-4">
                 <motion.div
                     className="text-sm space-y-2"
                     whileInView={{ x: 0, opacity: 1 }}

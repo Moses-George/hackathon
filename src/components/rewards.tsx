@@ -1,19 +1,21 @@
-// import { ReactComponent as PurpleLensFlare } from "@/assets/images/Purple-Lens-Flare-PNG.svg";
 import championCup from "@/assets/images/champion-cup.png";
 import reward from "@/assets/images/rewards.png";
 import { motion } from "framer-motion";
 import star from "@/assets/images/star.png";
 import starPu from "@/assets/images/star-pu.png";
+import flare from "@/assets/images/Purple-Lens-Flare-PNG.png";
 
 const Rewards = () => {
 
     return (
         <section className="relative container sm:px-8 py-10 sm:py-8 grid grid-cols-[4fr_6fr] sm:grid-cols-1 gap-12">
+
+            <img className="absolute -bottom-[35%] sm:bottom-[52%] -left-40 sm:-left-10 sm:-rotate-90 sm:w-full z-[-1] " src={flare} alt="" />
+
             <img className="absolute top-10 left-44 sm:left-10 w-6 h-6 sm:w-4 sm:h-4" src={starPu} alt="" />
             <img className="absolute right-32 sm:right-10 bottom-[50%] sm:w-4 sm:h-4" src={star} alt="" />
             <img className="absolute right-[50%] sm:left-10 bottom-[65%] sm:w-4 sm:h-4" src={star} alt="" />
-            {/* <PurpleLensFlare className="absolute top-[0%] -left-[15%] w-4/5 h-4/5 z-[-1] " /> */}
-            {/* <PurpleLensFlare className="absolute top-[20%] -right-[50%] w-4/5 h-4/5 transform rotate-180 z-[-1] " /> */}
+
             <div className="w-fit self-center">
                 <motion.img className="z-[1000] sm:hidden" src={championCup} alt=""
                     whileInView={{ x: 0, opacity: 1 }}
