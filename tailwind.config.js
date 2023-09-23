@@ -17,7 +17,17 @@ module.exports = {
         "2xl": "1280px"
       }
     },
+    screens: {
+      'sm': {'min': '320px', 'max': '639px'},
+      'md': {'min': '640px', 'max': '968px'},
+      'lg': {'max': '1280px'},
+      'xl': {'max': '1280px'},
+      '2xl': {'max': '1280px'},
+    },
     extend: {
+      fontFamily: {
+        "Montserrat": ['Montserrat', 'Ubuntu']
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -25,27 +35,8 @@ module.exports = {
         background: "#150E28",
         peach: "#FF29B9",
         purple: "#903AFF",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
+        "heading-text": "#D434FE",
+        bgColor: "#150E28",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

@@ -5,6 +5,9 @@ import IntroSection from "@/components/introSection";
 import TitleSection from "@/components/titleSection";
 import Timeline from "@/components/timeline";
 import Rewards from "@/components/rewards";
+import Partners from "@/components/Partners";
+import PrivacyPolicy from "@/components/PrivacyPolicy";
+import Footer from "@/components/layout/footer";
 
 
 const Home = () => {
@@ -18,6 +21,9 @@ const Home = () => {
             <FaQs />
             <Timeline />
             <Rewards />
+            <Partners />
+            <PrivacyPolicy />
+            <Footer />
         </>
     )
 }

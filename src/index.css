@@ -1,20 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ html {
+  width: 100%;
+  box-sizing: border-box;
+}
 
 body {
   background-color: #150E28;
   margin: 0;
   overflow-x: hidden;
+  width: 100%;
+  font-family: 'Montserrat', 'Ubuntu';
 }
 
-.border-gradient:hover {
+#success-modal-root {
+  display: grid;
+  justify-items: center;
+}
+
+.border-gradient {
   border: 3px solid;
   border-image-slice: 1;
 background: transparent;
 border-style: solid;
 border-width: 3px;
-border-radius: .3rem;
+border-radius: .5rem;
+border-image-source: linear-gradient(180deg, #9A39FF 0%, #FF29B9 100%) !important;
+}
+
+.btn-border-gradient:hover {
+  border: 3px solid;
+  border-image-slice: 1;
+background: transparent;
+border-style: solid;
+border-width: 3px;
+border-radius: .5rem;
 border-image-source: linear-gradient(180deg, #9A39FF 0%, #FF29B9 100%) !important;
 }
 
@@ -28,18 +52,16 @@ border-image-source: linear-gradient(180deg, #9A39FF 0%, #FF29B9 100%) !importan
 
 .active::after {
   content: "";
-  position: absolute;
-  background-color: red;
-  width: 100%;
-  bottom: -2rem;
-  left: 0;
-  height: 3px;
   transition: width 150ms ease-in-out;
 }
 
 .unselected {
   color: #fff;
-  border: none;
+}
+
+.backdrop {
+  backdrop-filter: blur(2px);
+  filter: blur(1px);
 }
  
 /* @layer base {

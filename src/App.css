@@ -1,8 +1,11 @@
-/* #root {
-  max-width: 1124px;
-  /* margin: 0 auto;
+#root {
+  width: 100%;
+  overflow-x: hidden;
+   /* max-width: 1124px;  */
+   /* margin: 0 auto;
   padding: 2rem;
-  text-align: center; */
+  text-align: center;  */
+}
 
 /* 
 .logo {

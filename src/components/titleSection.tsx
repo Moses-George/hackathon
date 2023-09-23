@@ -1,25 +1,69 @@
-import { ReactComponent as PurpleLensFlare } from "@/assets/images/Purple-Lens-Flare-PNG.svg";
-// import { ReactComponent as Title } from "@/assets/images/Title.svg";
 import HackathonGuy from "@/assets/images/hackathon-guy.png";
 import { ReactComponent as CountDown } from "@/assets/images/countdown-time.svg";
+// import { ReactComponent as PurpleLensFlare } from "@/assets/images/Purple-Lens-Flare-PNG.svg";
+import { ReactComponent as Curve } from "@/assets/images/curve.svg";
+// import flare from "@/assets/images/Purple-Lens-Flare-PNG.png";
+import star from "@/assets/images/star.png";
+// import starGra from "@/assets/images/sata-gra.png";
 import title from "@/assets/images/title.png";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 const TitleSection = () => {
 
     return (
-        <section className="relative py-20 grid grid-cols-2 border-solid">
-            <PurpleLensFlare className="absolute -top-20 -left-10  " />
-            <div className="w-full space-y-12">
-                <div className="text-white space-y-6">
-                    <img src={title} alt=""  />
-                    <p className="max-w-sm">Participate in getLinked tech Hackathon 2023 stand a chance to win a big price</p>
-                    <Button className="bg-gradient-to-r from-peach to-purple px-4 w-32 rounded-[.2rem] border-gradient z-[1000]" >Register</Button>
+        <section className="sm:pt-8">
+            <img className="absolute left-40 top-10 sm:top-28 smw-6 sm:h-6" src={star} alt="" />
+            {/* <img className="absolute -bottom-[50%]  w-[50rem] h-[50rem] transform rotate-90" src={flare} alt="" /> */}
+            <motion.div
+                className="flex flex-col gap-1 items-end md:items-center px-[3rem] sm:px-4 py-8 md:py-12"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 1, ease: "easeIn" }}>
+                <h1 className="text-4xl sm:text-xl text-white italic tracking-wide sm:text-center md:text-center">Igniting a revolution in HR Innovation</h1>
+                <Curve className="sm:w-32" />
+            </motion.div>
+            <div className="grid grid-cols-2 sm:grid-cols-1 container">
+                <motion.div
+                    className="relative w-full space-y-12 sm:py-8 sm:-mt-10 bg-[url('./assets/images/Purple-Lens-Flare-PNG.png') "
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
+                >
+                    {/* <PurpleLensFlare className="absolute bottom-[40%] -left-[0%] h-4/5 w-4/5  " /> */}
+                    <div className="text-white space-y-6 flex flex-col sm:items-center">
+                        <img
+                            className="sm:w-full -mb-3" src={title} alt=""
+                        />
+                        <p className="">Participate in getLinked tech Hackathon 2023 stand a chance to win a big price</p>
+                        <Link to="/register">
+                            <Button className="bg-gradient-to-r from-peach to-purple px-4 w-32 rounded-[.2rem] btn-border-gradient z-[100] " >Register</Button>
+                        </Link>
+                    </div>
+                    <CountDown />
+                </motion.div>
+                <div className="relative justify-self-end w-full -mr-20 sm:mr-0">
+                    {/* <PurpleLensFlare className="absolute -bottom-[27%] -right-[80%] " /> */}
+                    <motion.img
+                        className="w-[150%] h-full justify-self-end align-self-center sm:hidden"
+                        src={HackathonGuy}
+                        alt="hackathon guy"
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 1, ease: "easeIn" }}
+                        initial={{ y: 100, opacity: 0 }} />
                 </div>
-                <CountDown />
             </div>
-            <img className="w-full -mr-20 h-full justify-self-end align-self-center" src={HackathonGuy} alt="hackathon guy" />
+            <motion.img
+                className="w-[120%] h-full justify-self-end align-self-center hidden sm:block"
+                src={HackathonGuy}
+                alt="hackathon guy"
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 1, ease: "easeIn" }}
+                initial={{ y: 100, opacity: 0 }} />
         </section>
     )
 }

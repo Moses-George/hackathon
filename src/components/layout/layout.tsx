@@ -1,5 +1,19 @@
 import { PropsWithChildren } from "react";
-import Navbar from "./navbar"
+import { AnimatePresence, motion } from "framer-motion";
+import Navbar from "./navbar";
+
+const routeVariants = {
+    initial: {
+        y: "100vh",
+    },
+    final: {
+        y: "0vh",
+        transition: {
+            type: "spring",
+            mass: 0.4
+        }
+    }
+}
 
 
 
@@ -8,7 +22,16 @@ const Layout = ({ children }: PropsWithChildren) => {
     return (
         <>
             <Navbar />
-            <main className="container">{children}</main>
+            <AnimatePresence>
+                <motion.main
+                    className="contaner sm:-8 w-ful"
+                    initial="initial"
+                    animate="final"
+                    variants={routeVariants}
+                >
+                    {children}
+                </motion.main>
+            </AnimatePresence>
         </>
     )
 }

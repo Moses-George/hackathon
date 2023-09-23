@@ -1,24 +1,34 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
 import './App.css';
-// import { Button } from './components/ui/button';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Layout from './components/layout/layout';
 import Contact from './pages/contact';
 import Home from './pages/home';
+import Register from './pages/register';
+
+// const LocationProvider = ({children}) => {
+
+// }
+
+const RoutesWithAnimation = () => {
+
+  const location = useLocation();
+
+  return (
+    <Routes location={location} key={location.key}>
+      <Route path='/' element={<Home />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/register' element={<Register />} />
+    </Routes>
+  )
+}
 
 function App() {
-  // const [count, setCount] = useState(0);
 
   return (
     <Layout>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
+      <RoutesWithAnimation />
     </Layout>
   )
 }
 
-export default App
+export default App;
