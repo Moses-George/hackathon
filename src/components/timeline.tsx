@@ -6,7 +6,7 @@ import starPu from "@/assets/images/star-pu.png";
 const Timeline = () => {
 
     return (
-        <section className="container relative grid pt-10 pb-20 space-y-20 w-full sm:justify-items-start">
+        <section className="container sm:px-8 relative grid pt-10 pb-20 space-y-20 w-full sm:justify-items-start">
             <img className="absolute top-72 sm:top-56 left-44 sm:w-6 sm:h-6" src={starPu} alt="" />
             <img className="absolute right-32 sm:right-10 bottom-[50%] sm:bottom-[55%] sm:w-4 sm:h-4" src={star} alt="" />
             <div className="max-w-xs text-center text-white justify-self-center space-y-3">

@@ -24,7 +24,7 @@ const Navbar = () => {
     return (
         <>
             {isVisible && <NavMenu onClose={() => setIsVisible(false)} />}
-            <header className={`container border-solid border-b-[1px] border-purple w-full ${(isRegisterPage || isContactPage) && "sm:hidden md:hidden"}`} >
+            <header className={`container sm:px-8 border-solid border-b-[1px] border-purple w-full ${(isRegisterPage || isContactPage) && "sm:hidden md:hidden"}`} >
                 <nav className="grid grid-cols-[5.5fr_4.5fr] sm:grid-cols-2 py-8">
                     <div className="">
                         <Logo className="sm:w-4/5" />

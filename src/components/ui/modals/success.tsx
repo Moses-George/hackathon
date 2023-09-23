@@ -27,8 +27,11 @@ const dropIn = {
     }
 }
 
+interface SuccessProps {
+    onClose: () => void;
+}
 
-const SuccessOverlay = () => {
+const SuccessOverlay = ({ onClose }: SuccessProps) => {
 
     return (
         <motion.div
@@ -44,23 +47,22 @@ const SuccessOverlay = () => {
                     <h1 className="">you have successfully registered!</h1>
                 </div>
                 <p className="text-white text-sm w-[50%] sm:w-full text-center mx-auto">Yes it was easy and you did it!. check your mail box for next step.</p>
-                <Button className="bg-gradient-to-r from-peach to-purple px-4 h-12 w-full text-white rounded-[.2rem] btn-border-gradient " >Back</Button>
+                <Button onClick={onClose} className="bg-gradient-to-r from-peach to-purple px-4 h-12 w-full text-white rounded-[.2rem] btn-border-gradient " >Back</Button>
             </div>
         </motion.div>
     )
 }
 
-const Success = () => {
+const Success = ({ onClose }: SuccessProps) => {
 
     const root = document.getElementById('success-modal-root') as HTMLElement;
 
     return (
         <React.Fragment>
-            {/* <Backdrop /> */}
             {ReactDOM.createPortal(
                 <>
                     <Backdrop />
-                    <SuccessOverlay />
+                    <SuccessOverlay onClose={onClose} />
                 </>, root)}
         </React.Fragment>
     )

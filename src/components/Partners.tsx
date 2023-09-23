@@ -8,7 +8,7 @@ import starPu from "@/assets/images/star-pu.png";
 const Partners = () => {
 
     return (
-        <section className="relative container py-10 flex flex-col items-center gap-y-20 sm:gap-y-10">
+        <section className="relative container sm:px-8 py-10 flex flex-col items-center gap-y-20 sm:gap-y-10">
             <img className="absolute top-44 sm:top-48 left-12 sm:left-16 sm:w-4 sm:h-4" src={starPu} alt="" />
             <img className="absolute right-[43%] sm:right-24 bottom-20 sm:bottom-12 sm:w-4 sm:h-4" src={star} alt="" />
             {/* <PurpleLensFlare className="absolute top-[0%] -left-[50%]" /> */}

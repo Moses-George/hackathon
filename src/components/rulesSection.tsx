@@ -7,13 +7,13 @@ import star from "@/assets/images/star.png";
 const RulesSection = () => {
 
     return (
-        <section className="container relative py-10 sm:py-8 grid grid-cols-2 sm:grid-cols-1 gap-12">
+        <section className="container w-full sm:px-8 relative py-10 sm:py-8 grid grid-cols-2 sm:grid-cols-1 gap-12 ">
             <img className="absolute bottom-40 sm:top-20 right-[50%] sm:left-8 sm:w-6 sm:h-6" src={star} alt="" />
             {/* <PurpleLensFlare className="absolute -top-10 -left-10  " /> */}
             {/* <PurpleLensFlare className="absolute -bottom-50 right-0 ml-40  " /> */}
             {/* <StarGra className="absolute left-5 w-16 h-16 z-[100] " /> */}
             {/* <StarPu className="absolute right-60" /> */}
-            <div className="space-y-5 self-center max-w-lg sm:text-center sm:row-start-2 sm:row-end-3 ">
+            <div className="space-y-5 w-ful justify-self-end self-center max-w-lg sm:text-center sm:row-start-2 sm:row-end-3 ">
                 <motion.div
                     className="space-y-2"
                     whileInView={{ x: 0, opacity: 1 }}
@@ -36,12 +36,12 @@ const RulesSection = () => {
                 </motion.p>
             </div>
             <motion.div
-                className="w-full  justify-self-end"
+                className="w-ful justify-self-end"
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 1, ease: "easeIn" }}
                 initial={{ x: 100, opacity: 0 }}>
-                <img className="sm:row-start-1 sm:row-end-2 sm:w-full" src={rules} />
+                <img className="sm:row-start-1 sm:row-end-2 sm:w-full w-" src={rules} />
             </motion.div>
         </section>
     )

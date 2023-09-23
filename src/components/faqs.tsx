@@ -20,7 +20,7 @@ import starGra from "@/assets/images/star-gra.png";
 const FaQs = () => {
 
     return (
-        <section className="container relative py-20 sm:py-8 w-full grid grid-cols-2 sm:grid-cols-1 gap-20">
+        <section className="container sm:px-8 relative py-20 sm:py-8 w-full grid grid-cols-2 sm:grid-cols-1 gap-20">
             <img className="absolute top-8 sm:top-0 left-10 sm:w-4 sm:h-4" src={starPu} alt="" />
             <img className="absolute right-96 sm:right-20 top-28 sm:top-48" src={starGra} alt="" />
             <img className="absolute right-[40%] sm:left-10 top-40" src={starGra} alt="" />
@@ -73,7 +73,12 @@ const FaQs = () => {
                     <QuestionMark className="-mt-10" />
                     <QuestionMarkSm />
                 </div>
-                <img className="" src={cwork} alt="" />
+                <motion.img
+                    className="" src={cwork} alt=""
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3, duration: 1, ease: "easeIn" }}
+                    initial={{ x: -100, opacity: 0 }} />
             </div>
         </section >
     )

@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 
-export interface InitialRegisterData {
+export interface RegisterData {
     teamName: string;
     phoneNumber: string;
     email: string;
@@ -10,7 +10,7 @@ export interface InitialRegisterData {
     privacyAccepted: boolean;
 }
 
-export interface InitialContactData {
+export interface ContactData {
     email: string;
     phoneNumber: string;
     firstName: string;
@@ -20,9 +20,9 @@ export interface InitialContactData {
 
 
 
-export const useRegisterForm = (initialUserData: InitialRegisterData) => {
+export const useRegisterForm = (initialUserData: RegisterData) => {
 
-    const [userData, setUserData] = useState<InitialRegisterData>(initialUserData);
+    const [userData, setUserData] = useState<RegisterData>(initialUserData);
 
 
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -42,9 +42,9 @@ export const useRegisterForm = (initialUserData: InitialRegisterData) => {
 
 
 
-export const useContactForm = (initialUserData: InitialContactData) => {
+export const useContactForm = (initialUserData: ContactData) => {
 
-    const [userData, setUserData] = useState<InitialContactData>(initialUserData);
+    const [userData, setUserData] = useState<ContactData>(initialUserData);
 
 
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

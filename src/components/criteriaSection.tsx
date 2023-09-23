@@ -10,7 +10,7 @@ import starPu from "@/assets/images/star-pu.png";
 const CriteriaSection = () => {
 
     return (
-        <section className="container relative py-10 sm:py-12 grid grid-cols-2 sm:grid-cols-1 gap-12">
+        <section className="container sm:px-8 relative py-10 sm:py-12 grid grid-cols-2 sm:grid-cols-1 gap-12">
             <img className="absolute top-8 sm:top-0 left-36 sm:w-6 sm:h-6" src={starPu} alt="" />
             <div className="absolute sm:hidden top-20 left-36 z-[-1] bg-gradient-to-r from-peach to-purple p-12 rounded-full"></div>
             <img className="absolute right-[52%] sm:right-10 bottom-10 sm:bottom-0 sm:w-4 sm:h-4" src={star} alt="" />

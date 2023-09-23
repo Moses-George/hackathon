@@ -10,7 +10,7 @@ import starPu from "@/assets/images/star-pu.png";
 const IntroSection = () => {
 
     return (
-        <section className="container relative py-10 sm:py-8 grid grid-cols-2 sm:grid-cols-1 gap-12">
+        <section className="container sm:px-8 relative py-10 sm:py-8 grid grid-cols-2 sm:grid-cols-1 gap-12">
             {/* <hr className="w-[ absolute bottom-0" /> */}
             <img className="absolute top-56 left-20 sm:left-6 " src={starGra} alt="" />
             <img className="absolute top-32 right-44 sm:right-6" src={starPu} alt="" />

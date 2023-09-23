@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const PrivacyPolicy = () => {
 
     return (
-        <section className="container py-10 sm:py-8 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-12 w-full text-sm">
+        <section className="container sm:px-8 py-10 sm:py-8 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-12 w-full text-sm">
             <div className="relative w-full space-y-12">
                 {/* <PurpleLensFlare className="absolute -bottom-[50%] -left-[50%] mb-0" /> */}
                 <motion.div

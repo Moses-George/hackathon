@@ -8,7 +8,7 @@ import starPu from "@/assets/images/star-pu.png";
 const Rewards = () => {
 
     return (
-        <section className="relative container py-10 sm:py-8 grid grid-cols-[4fr_6fr] sm:grid-cols-1 gap-12">
+        <section className="relative container sm:px-8 py-10 sm:py-8 grid grid-cols-[4fr_6fr] sm:grid-cols-1 gap-12">
             <img className="absolute top-10 left-44 sm:left-10 w-6 h-6 sm:w-4 sm:h-4" src={starPu} alt="" />
             <img className="absolute right-32 sm:right-10 bottom-[50%] sm:w-4 sm:h-4" src={star} alt="" />
             <img className="absolute right-[50%] sm:left-10 bottom-[65%] sm:w-4 sm:h-4" src={star} alt="" />

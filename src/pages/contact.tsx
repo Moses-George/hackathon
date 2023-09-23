@@ -14,6 +14,7 @@ import { initialContactData } from "@/utils/formData";
 import { FormEvent } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { baseUrl } from "@/utils/baseUrl";
 
 
 
@@ -27,10 +28,8 @@ const Contact = () => {
     const sendContactInfo = async () => {
 
         const id = toast.loading("Sending your information...");
-        const baseUrl = "https://backend.getlinked.ai";
 
         try {
-            console.log(userData)
             const payload = {
                 "email": userData.email,
                 "phone_number": userData.phoneNumber,
@@ -46,7 +45,6 @@ const Contact = () => {
             });
 
             const data = await response.json();
-            console.log(data);
 
             if (!response.ok) {
                 throw new Error(data.message || 'Something went wrong!');
@@ -66,7 +64,7 @@ const Contact = () => {
     }
  
     return (
-        <section className="container grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-x-20 my-10 items-center shadow-md w-full">
+        <section className="container sm:px-8 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-x-20 my-10 items-center shadow-md w-full">
             <Back className="hidden sm:block md:block mb-8 w-8 h-8" onClick={() => navigate(-1)} />
             {/* <PurpleLensFlare className="absolute top-[20%] -left-[20%] " /> */}
             {/* <PurpleLensFlare className="absolute -bottom-[80%] -right-[30%] " /> */}

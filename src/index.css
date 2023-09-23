@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +14,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   width: 100%;
-  font-family: 'Montserrat', 'Ubuntu';
+  font-family: 'Montserrat', 'sans-serif';
+}
+
+p {
+  font-size: 300;
 }
 
 #success-modal-root {

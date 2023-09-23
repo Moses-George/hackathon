@@ -8,6 +8,7 @@ import { useRegisterForm } from "@/hooks/useForm";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { initialRegisterData, categories } from "@/utils/formData";
+import { baseUrl } from "@/utils/baseUrl";
 
 
 
@@ -22,7 +23,6 @@ const Register = () => {
     const register = async () => {
 
         const id = toast.loading("Your data is being registered...");
-        const baseUrl = "https://backend.getlinked.ai";
 
         try {
             const categoryId = categories.find(category => category.category === userData.category)?.id;
@@ -55,7 +55,7 @@ const Register = () => {
             setIsSuccess(true);
             setUserData(initialRegisterData);
         } catch (err: any) {
-            toast.update(id, { render: err.message, type: "error", isLoading: false, autoClose: 2000 });
+            toast.update(id, { render: err.message, type: "error", isLoading: false, autoClose: 3000 });
             console.error(err);
             setIsSuccess(false);
         }
@@ -67,22 +67,11 @@ const Register = () => {
         await register();
     }
 
-    // useEffect(() => {
-    //     const baseUrl = "https://backend.getlinked.ai";
-
-    //     const getList = async () => {
-
-    //         const response = await fetch(`${baseUrl}/hackathon/categories-list`);
-    //         const data = response.json();
-    //         console.log(data);
-    //     }
-    //     getList();
-    // }, [])
 
     return (
         <>
-            {isSuccess && <Success />}
-            <section className="container grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-x-8 sm:gap-x-0 my-10 sm:my-4  w-full">
+            {isSuccess && <Success onClose={() => setIsSuccess(false)} />}
+            <section className="container sm:px-6 grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-x-8 sm:gap-x-0 my-10 sm:my-4  w-full">
                 <motion.div
                     className="justify-self-start self-center"
                     initial={{ y: 100, opacity: 0 }}
