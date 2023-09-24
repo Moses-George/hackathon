@@ -16,7 +16,7 @@ const TitleSection = () => {
 
             <img className="absolute bottom-[30%] sm:-top-80 -left-10 sm:-left-10 -rotate-90  w-[42rem] sm:w-full sm:h-full z-[-1]" src={flare} alt="" />
 
-            <img className="absolute left-40 top-10 sm:top-36 smw-6 sm:h-6" src={star} alt="" />
+            <img className="absolute left-40 top-10 sm:top-28 smw-6 sm:h-6" src={star} alt="" />
 
             <motion.div
                 className="flex flex-col gap-1 items-end md:items-center sm:items-center px-[3rem] sm:px-[.5rem] pb-8 md:py-12"

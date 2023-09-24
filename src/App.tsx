@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Layout from './components/layout/layout';
 import Contact from './pages/contact';
 import Home from './pages/home';
@@ -18,6 +18,7 @@ const RoutesWithAnimation = () => {
       <Route path='/' element={<Home />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/register' element={<Register />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   )
 }

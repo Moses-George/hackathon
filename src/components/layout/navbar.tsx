@@ -33,7 +33,7 @@ const Navbar = () => {
                         <ul className="flex items-center justify-between md:gap-4 flex-1 sm:hidden">
                             {navLinks.map(navLink =>
                                 <li key={navLink.id}>
-                                    <NavLink to={navLink.path} className={({ isActive }) => (!isActive ? "unselected" : "active")}> {navLink.name}</NavLink>
+                                    <NavLink to={navLink.path} className={({ isActive }) => (!isActive ? "unselected" : "active")} > {navLink.name}</NavLink>
                                 </li>)}
                         </ul>
                         <Link to="/register">

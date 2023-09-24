@@ -18,6 +18,7 @@ import flare from "@/assets/images/Purple-Lens-Flare-PNG.png";
 import star from "@/assets/images/star.png";
 import starPu from "@/assets/images/star-pu.png";
 import starGra from "@/assets/images/star-gra.png";
+import { contactValidator } from "@/utils/validator";
 
 
 
@@ -30,6 +31,13 @@ const Contact = () => {
     const { userData, handleChange, setUserData } = useContactForm(initialContactData);
 
     const sendContactInfo = async () => {
+
+        const invalidFields = contactValidator(userData);
+
+
+        if (invalidFields) {
+            toast.error(`Please fill the field(s) ${invalidFields}`, { autoClose: 3000 });
+        }
 
         const id = toast.loading("Sending your information...");
 
@@ -141,7 +149,7 @@ const Contact = () => {
                         name="email" required />
                     <Input
                         className="w-full border-white text-white"
-                        type="text"
+                        type="number"
                         placeholder="Phone Number"
                         value={userData.phoneNumber}
                         onChange={handleChange}

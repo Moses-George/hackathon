@@ -39,12 +39,11 @@ const NavMenuOverlay = ({ onClose }: navMenuProps) => {
 
     return (
         <motion.div
-            className="fixed bg-bgColor z-[9999] top-16 p-8 pb-28 space-y-6 w-4/5"
+            className="fixed bg-bgColor z-[9999] top-16 p-8 pb-28 space-y-6 w-4/5 hidden sm:block"
             variants={dropIn}
             initial="hidden"
             animate="visible"
-            exit="exit"
-        >
+            exit="exit">
             <div className="relative float-right w-fit" onClick={onClose}>
                 <CloseBorder className="" />
                 <Close className="absolute top-1.5 left-1.5" />
