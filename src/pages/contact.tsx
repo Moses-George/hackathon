@@ -37,6 +37,7 @@ const Contact = () => {
 
         if (invalidFields) {
             toast.error(`Please fill the field(s) ${invalidFields}`, { autoClose: 3000 });
+            return;
         }
 
         const id = toast.loading("Sending your information...");
